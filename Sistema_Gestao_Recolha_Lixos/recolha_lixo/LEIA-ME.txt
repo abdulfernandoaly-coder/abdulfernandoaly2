@@ -1,0 +1,35 @@
+SISTEMA DE GESTAO DE RECOLHA DE LIXOS
+
+REQUISITOS
+- XAMPP instalado
+- Apache e MySQL iniciados
+- Visual Studio Code (para editar os ficheiros)
+
+INSTALACAO
+1. Extraia a pasta recolha_lixo para:
+   C:\xampp\htdocs\
+2. Abra o XAMPP Control Panel.
+3. Clique em Start no Apache e no MySQL.
+4. Abra http://localhost/phpmyadmin
+5. No phpMyAdmin, abra o separador SQL.
+6. Execute o conteúdo do ficheiro base_dados.sql.
+7. Abra no navegador:
+   http://localhost/recolha_lixo/
+
+FICHEIROS
+- index.html: formulário e tabela apresentados ao utilizador.
+- estilo.css: aparência da página.
+- script.js: envia e consulta dados usando fetch.
+- conexao.php: liga PHP ao MySQL.
+- guardar.php: grava um registo.
+- listar.php: consulta os registos.
+- base_dados.sql: cria a base de dados e a tabela.
+
+NOTA
+A configuração de conexao.php usa os valores padrão do XAMPP:
+utilizador root e senha vazia. Se alterou a senha do MySQL,
+atualize a variável $senha em conexao.php.
+
+IMPORTANTE
+Não abra index.html diretamente nem use Live Server para executar PHP.
+Aceda através de http://localhost/recolha_lixo/.

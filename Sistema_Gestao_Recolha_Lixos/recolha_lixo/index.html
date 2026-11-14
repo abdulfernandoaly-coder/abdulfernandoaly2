@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Gestão de Recolha de Lixos</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Sistema de Gestao de Recolha de Lixos</h1>
+      <p>Registo e consulta de recolhas</p>
+    </header>
+
+    <section class="painel">
+      <h2>Registar recolha</h2>
+      <form id="formulario">
+        <label for="nome">Nome do responsável</label>
+        <input type="text" id="nome" name="nome" maxlength="100" required>
+
+        <label for="bairro">Bairro</label>
+        <input type="text" id="bairro" name="bairro" maxlength="100" required>
+
+        <label for="quantidade">Quantidade de sacos</label>
+        <input type="number" id="quantidade" name="quantidade" min="1" required>
+
+        <button type="submit">Guardar dados</button>
+      </form>
+      <p id="mensagem" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="painel">
+      <h2>Recolhas registadas</h2>
+      <button type="button" id="atualizar">Atualizar lista</button>
+      <div class="tabela-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th><th>Responsável</th><th>Bairro</th>
+              <th>Quantidade</th><th>Data</th>
+            </tr>
+          </thead>
+          <tbody id="lista-recolhas">
+            <tr><td colspan="5">A carregar...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
